@@ -4,7 +4,7 @@ module Crunch
   describe Meal do
     before :each do
       @ss_row = [
-        '2010-10-02',
+        '2014-10-02',
         'Pinky',
         '2',
         '2',
@@ -13,8 +13,8 @@ module Crunch
       @meal = Meal.new @ss_row
     end
 
-#    it 'should have a date' do
-#      expect(@meal.date).to be 'Thursday the 2nd of October'
-#    end
+    it 'should have a date' do
+      expect(@meal.date).to eq 'Thursday the 2nd of October'
+    end
   end
 end
