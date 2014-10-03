@@ -10,4 +10,8 @@ SCHEDULER.every '5m', :first_at => Time.now do
   meal = Crunch::Meal.new feeds.rows[-1]
 
   send_event('meal', { food: meal.menu, date: meal.date, interval: "(#{meal.time_since})" })
+
+  lengths = sheet.worksheets[1]
+  length = Crunch::Length.new lengths.rows[-1]
+  send_event('length', { measurement: length.measurement, date: length.date, interval: "(#{length.time_since})" })
 end

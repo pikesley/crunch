@@ -3,3 +3,4 @@ require 'active_support/core_ext/integer/inflections'
 
 require_relative 'crunch/meal'
 require_relative 'crunch/date'
+require_relative 'crunch/length'
