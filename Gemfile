@@ -8,6 +8,7 @@ gem 'google_drive'
 gem 'flickraw'
 gem 'activesupport'
 gem 'dotenv'
+gem 'rake'
 
 group :development, :test do
   gem 'vcr'
