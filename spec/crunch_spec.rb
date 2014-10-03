@@ -16,5 +16,13 @@ module Crunch
     it 'should have a date' do
       expect(@meal.date).to eq 'Thursday the 2nd of October'
     end
+
+    it 'should have a time_since' do
+      expect(@meal.time_since).to eq 'yesterday'
+    end
+
+    it 'should have a meal description' do
+      expect(@meal.menu).to eq '2 Pinkies'
+    end
   end
 end
