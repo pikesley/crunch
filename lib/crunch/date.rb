@@ -4,19 +4,25 @@ module Crunch
     d.strftime "%A the #{d.day.ordinalize} of %B"
   end
 
-  def self.time_since past_date
+  def self.time_since past_date, brackets = true
     now = DateTime.now
     i = (now - Date.parse(past_date)).to_i
 
-    return 'in the future' if i < 0
-    return 'today' if i == 0
-    return 'yesterday' if i == 1
-
     d = i == 1 ? 'day' : 'days'
 
-    '%d %s ago' % [
+    s = '%d %s ago' % [
       i,
       d
     ]
+
+    s = 'in the future' if i < 0
+    s = 'today' if i == 0
+    s = 'yesterday' if i == 1
+
+    if brackets
+      s = '(%s)' % s
+    end
+
+    s
   end
 end

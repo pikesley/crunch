@@ -7,6 +7,7 @@
 // ----------------------------------------------------------------------------
 $background-color: #ff5900;
 $text-color: #fff;
+$counter-color: #eee;
 
 $background-warning-color-1: #e82711;
 $background-warning-color-2: #9b2d23;
@@ -96,11 +97,11 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
+  color: $counter-color;
 }
 h2 {
-  text-transform: uppercase;
   font-size: 76px;
-  font-weight: 700;
+  font-weight: 900;
   color: $text-color;
 }
 h3 {
