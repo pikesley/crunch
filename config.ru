@@ -3,6 +3,7 @@ require 'dashing'
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
   set :default_dashboard, 'snake'
+  set :title, 'Crunchy Nut Corn Snake'
 
   helpers do
     def protected!
