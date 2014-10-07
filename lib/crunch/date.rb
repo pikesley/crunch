@@ -8,25 +8,28 @@ module Crunch
     now = DateTime.now
     i = (now - Date.parse(past_date)).to_i
 
+    s =  case
+    when i > 7
 
-    if i > 7
       i = (i / 7).floor
       w = i == 1 ? 'week' : 'weeks'
-      s = '%d %s ago' % [
+      '%d %s ago' % [
         i,
         w
       ]
+    when i < 0
+      'in the future'
+    when i == 0
+      'today'
+    when i == 1
+      'yesterday'
     else
       d = i == 1 ? 'day' : 'days'
-      s = '%d %s ago' % [
+      '%d %s ago' % [
         i,
         d
       ]
     end
-
-    s = 'in the future' if i < 0
-    s = 'today' if i == 0
-    s = 'yesterday' if i == 1
 
     if brackets
       s = '(%s)' % s
