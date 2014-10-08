@@ -3,3 +3,7 @@ history.yml
 
 .env
 coverage/
+
+.bundle/
+.dpl/
+vendor
