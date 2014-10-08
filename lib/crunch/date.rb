@@ -6,18 +6,32 @@ module Crunch
 
   def self.time_since past_date, brackets = true
     now = DateTime.now
-    i = (now - Date.parse(past_date)).to_i
+    before = Date.parse past_date
+    i = (now - before).to_i
 
-    d = i == 1 ? 'day' : 'days'
+    s = case
 
-    s = '%d %s ago' % [
-      i,
-      d
-    ]
+    when i == 0
+      'today'
 
-    s = 'in the future' if i < 0
-    s = 'today' if i == 0
-    s = 'yesterday' if i == 1
+    when i == 1
+      'yesterday'
+
+    when i < 0
+      'in the future'
+
+    when i > 728
+      '%d years ago' % (i / 365).floor
+
+    when i > 59
+      '%d months ago' % (i / 30).floor
+
+    when i > 13
+      '%d weeks ago' % (i / 7).floor
+
+    else
+      '%d days ago' % i
+    end
 
     if brackets
       s = '(%s)' % s
