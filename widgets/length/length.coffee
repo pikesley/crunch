@@ -4,13 +4,12 @@ class Dashing.Length extends Dashing.Widget
     return @get('average') if @get('average')
     return @get('displayedValue') if @get('displayedValue')
     points = @get('points')
+    value = @get('value')
     if points
       points[points.length - 1].y
 
   ready: ->
     color = '#207e62'
-#    if @get('current') > 8
-#      color = '#f00'
     container = $(@node).parent()
     # Gross hacks. Let's fix this.
     width = (Dashing.widget_base_dimensions[0] * container.data("sizex")) + Dashing.widget_margins[0] * 2 * (container.data("sizex") - 1)

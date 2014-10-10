@@ -6,7 +6,7 @@ $background-color:  #bf6230;
 $title-color:       rgba(255, 255, 255, 1);
 $moreinfo-color:    rgba(255, 255, 255, 0.3);
 $tick-color:        #35d4a4;
-
+$alt-tick-color:        #eee;
 
 // ----------------------------------------------------------------------------
 // Widget-graph styles
@@ -48,8 +48,6 @@ $tick-color:        #35d4a4;
   .x_tick {
     position: absolute;
     bottom: 0;
-  color: $tick-color;
-  opacity: 0.5;
     .title {
       font-size: 10px;
       color: $tick-color;
@@ -61,7 +59,7 @@ $tick-color:        #35d4a4;
   .y_ticks {
     font-size: 10px;
     fill: $tick-color;
-    fill-opacity: 0.5;
+    fill-opacity: 0.7;
   }
 
   .domain {
