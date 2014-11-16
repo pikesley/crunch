@@ -17,6 +17,7 @@ SCHEDULER.every '5m', :first_at => Time.now do
   weights = Crunch::Weight.new sheet.worksheets[2].rows[1..-1]
   send_event(:weight, points: weights.points, suffix: ' grams', date: weights.latest_date, interval: weights.time_since)
 
-  shed = Crunch::Shed.new sheet.worksheets[3].rows[-1]
+  sheds = sheet.worksheets[3]
+  shed = Crunch::Shed.new sheds.rows.reverse.select { |r| r[2] != '' }[0]
   send_event(:shed, { date: shed.date, interval: shed.time_since })
 end
