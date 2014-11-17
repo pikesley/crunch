@@ -5,7 +5,7 @@ deploy:
   provider: heroku
   strategy: git
   api_key:
-    secure: ZFtSblaoZEiAg9RYgIWcNodKajLMfaXC80miESFixPpmi1MWIjgn8PXJ0/JNqumoITAmVznrygp8pE2lzfgfTVoY034RUsRjaf0s3k7T8k1Nw/bEfOI78ozSJHYhrU6mCdxqJae7LlpG/hNy2VwPscZlBRHZumOCgb1cwlLvJiM=
+    secure: "aVXgNZMY/NAbrNtnpilEDDh9Aa12+0x1neHMe1Uw+T5K+dmRZbb8FvN68IZKP5P+ADrKiaSIs/UCU6ALYQFkAjHkmqfsgfVL5pSpMjHL4Fv/VHXAvu19tvkW1CoceeeI+oZ9tE1IBBLTtiIK7PfcuyO5/nNoufrQKUXHylDJUR0="
   app: crunchynutcornsnake
   on:
     repo: pikesley/crunch
