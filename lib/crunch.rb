@@ -1,6 +1,6 @@
 require 'date'
 require 'dotenv'
-require 'google_drive'
+require 'google_drive_v0'
 require 'active_support/core_ext/integer/inflections'
 
 require_relative 'crunch/meal'
